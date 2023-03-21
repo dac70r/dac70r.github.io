@@ -1,3 +1,3 @@
 # Personal Website
 
-Contains personal and contain information as well as academic achievements. 
+Contains personal and contact information as well as academic achievements. 
