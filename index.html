@@ -17,7 +17,35 @@
             width: 105px;
             height:20px;
             border: 2px solid black;
-        }   
+        }
+        .tab{
+            overflow: hidden;
+            border:1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button{
+            background-color: inherit;
+            float:left;
+            border:none;
+            outline:none;
+            cursor:pointer;
+            padding:14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        .tab button:hover{
+            background-color: #ddd;
+        }
+        .tab button.active{
+            background-color:#ccc;
+        }
+        .tabcontent{
+            display:none;
+            padding:6px 12px;
+            border:1px solid #ccc;
+            border-top:none;
+        }
     </style>
 </head>
 
@@ -28,8 +56,7 @@
                 height="200" alt = "Dennis's Picture"></td>
             <td>
                 <h1>Dennis Wong Guan Ming 黃冠銘</h1><font size="+1">
-                <p><em> Bachelor of Engineering in Electronic Engineering</em></p>
-                <p><em> The Hong Kong University of Science and Technology </em></p> 
+                <p><em> The Hong Kong University of Science and Technology <br> (BEng in Electronic Engineering) </em></p> 
                 <p><em>Email: denniswong178@gmail.com </em>| <em>Phone(HK): +852 56602300 </em>| <em>Phone(MY): +60 11-11469306 </em></p>
                 <p><em>LinkedIn: www.linkedin.com/in/dgmwong </em></p></font>
             </td>
@@ -38,19 +65,34 @@
     </table> 
     <!--- <img src="https://media.licdn.com/dms/image/D5603AQGRKUzuuMx9YQ/profile-displayphoto-shrink_400_400/0/1665409905109?e=1680134400&v=beta&t=vzIrxKASX2PkGo-2FflDSVW8HSIoVWdzFpcKXfntlag" alt="Dennis's Profile Picture"> -->
     <hr>
-    <h3><u>Education</u></h3>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">Education</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Professional Experience</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Academic Projects</button>
+        <button class="tablinks" onclick="openCity(event, 'Singapore')">Extra-Curricular</button>
+        <button class="tablinks" onclick="openCity(event, 'Hong Kong')">Relevant Skills</button>
+        <button class="tablinks" onclick="openCity(event, 'Kuala Lumpur')">Courses</button>
+      </div>
+      
+      <div id="London" class="tabcontent" style="display:block">
+        <h3><u>Education</u></h3>
         <ul>
             <li> The Hong Kong University of Science and Technology <em>---------(2019 ~ 2023)</em> Grade: 2nd Class Honors, Division I</li>
             <li> National University of Singapore Academic Exchange Program <em>--------(2022)</em> Grade: N/A</li> 
             <li> Foon Yew High School <em>-----------------------------------------------(2013 ~ 2018)</em> Grade: 6A, 2B</li>
         </ul>
-    <h3><u>Professional Experience</u></h3>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h3><u>Professional Experience</u></h3>
     <ul>
         <li> Consulting Intern @ Deloitte Advisory (Hong Kong) Limited <a href="https://www2.deloitte.com/cn/en.html">Company Website</a></li>
         <li> Firmware Engineer Trainee @ Genev Limited <a href="https://www.genev.com.hk/">Company Website</a></li>
     </ul>
-
-    <h3><u>Academic Projects</u></h3>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h3><u>Academic Projects</u></h3>
     <ul>
         <li> ELEC4900: Final Year Design Project - FPGA-Controlled Single Refreshable Braille Character <br>
             <a href="FinalPoster.pdf">Project Poster</a>
@@ -62,28 +104,51 @@
         <li> EE2026:  Digital Design - Digital Sound Level Meter <a href="S1_07_Dennis Wong Guan Ming_Shin Donghun_Report_01.pdf"> Project Report</a> <a href="https://www.youtube.com/watch?v=xo3FzqXuZ_4"> Demo Video</a></li>
         <li> ELEC3300: Introduction to Embedded Systems - Arcade System <a href="https://www.youtube.com/watch?v=r7zJubd84dI"> Demo Video</a>
     </ul>
+      </div>
 
-    <h3><u>Extra-Curricular Activities</u></h3>
+      <div id="Singapore" class="tabcontent">
+        <h3><u>Extra-Curricular Activities</u></h3>
     <ul>
         <li> Redbird EV Racing </li>
         <li> Hong Kong Malaysian Student's Association <a href="https://www.thehkmsa.com/about-us/">About HKMSA</a></li>
         <li> Electronic and Computer Engineering Student Ambassador </li>
     </ul>
+      </div>
 
-    <h3><u>Relevant Skills</u></h3>
+      <div id="Hong Kong" class="tabcontent">
+        <h3><u>Relevant Skills</u></h3>
     <ul>
         <li> Programming: C/C++, Java, Python, Verilog, VHDL, HTML, CSS, Javascript </li>
         <li> General PC: MS Office, Power BI </li>
         <li> Applications: Matlab, Power BI, LTSpice </li>
     </ul>
-    
-    
-    <h3><u>Course Taken</u></h3>
+      </div>
+
+      <div id="Kuala Lumpur" class="tabcontent">
+        <h3><u>Course Taken</u></h3>
     <ol>
         <!-- <li><a href="ELEC1100.html">ELEC1100</a></li>
         <li><a href="EE2026.html">EE2026</a> </li> -->
     </ol> 
-    <h4>Website last updated on: 2/10/2023</h4>
+      </div>
+    
+    <h4>Website last updated on: 3/10/2023</h4>
+
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
 
 </body>
 </html>
