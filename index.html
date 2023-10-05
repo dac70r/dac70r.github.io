@@ -46,14 +46,73 @@
             border:1px solid #ccc;
             border-top:none;
         }
+
+        * {
+            box-sizing: border-box
+        }
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .image-slideshow {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .fade {
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+        @keyframes fade {
+            from {opacity: .5}
+            to {opacity: 1}
+        }
+
+        .table1{
+            width: 100%;
+            border:1px solid #000;
+            border-collapse:collapse; 
+        }
+
+        .table1 th {
+            color:#000;
+            vertical-align:middle;
+            text-align:center;
+            border:1px solid #000; 
+        }
+
+        .table1 td {
+            color:#000099;
+            vertical-align:middle;
+            text-align:center;
+            border:1px solid #000; 
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }   
+
     </style>
 </head>
 
 <body>
     <table cellspacing="20">
         <tr>
-            <td><img src = "DennisPortrait.jpg" width="200" 
-                height="200" alt = "Dennis's Picture"></td>
+            <td><img src = "DennisPortrait.jpg" width="200px" 
+                height="200px" alt = "Dennis's Picture"></td>
             <td>
                 <h1>Dennis Wong Guan Ming 黃冠銘</h1><font size="+1">
                 <p><em> The Hong Kong University of Science and Technology <br> (BEng in Electronic Engineering) </em></p> 
@@ -72,6 +131,7 @@
         <button class="tablinks" onclick="openCity(event, 'Singapore')">Extra-Curricular</button>
         <button class="tablinks" onclick="openCity(event, 'Hong Kong')">Relevant Skills</button>
         <button class="tablinks" onclick="openCity(event, 'Kuala Lumpur')">Courses</button>
+        <button class="tablinks" onclick="openCity(event, 'Johor Bahru')">Photo Gallery</button>
       </div>
       
       <div id="London" class="tabcontent" style="display:block">
@@ -93,17 +153,44 @@
       
       <div id="Tokyo" class="tabcontent">
         <h3><u>Academic Projects</u></h3>
-    <ul>
-        <li> ELEC4900: Final Year Design Project - FPGA-Controlled Single Refreshable Braille Character <br>
-            <a href="FinalPoster.pdf">Project Poster</a>
-            <a href="Abstract for FPGA-Controlled Single Refreshable Braille Character.pdf">Project Abstract</a>
-            <a href=https://youtu.be/cZxDR9CNd1c>Demo Video</a> 
-            <a href=FinalYearProject_Awards.pdf>FYP Award</a>
-            <a href="https://github.com/dac70r/Final_Year_Project">Github</a>
-        </li>
-        <li> EE2026:  Digital Design - Digital Sound Level Meter <a href="S1_07_Dennis Wong Guan Ming_Shin Donghun_Report_01.pdf"> Project Report</a> <a href="https://www.youtube.com/watch?v=xo3FzqXuZ_4"> Demo Video</a></li>
-        <li> ELEC3300: Introduction to Embedded Systems - Arcade System <a href="https://www.youtube.com/watch?v=r7zJubd84dI"> Demo Video</a>
-    </ul>
+            <ul>
+                <table class="table1">
+                    <tr><th>No.</th><th>Course</th><th>Description</th></tr>
+                    <tr><td>1.</td>
+                        <td>ELEC4900: Final Year Design Project <br> FPGA-Controlled Single Refreshable Braille Character </td>
+                        <td><a href="FinalPoster.pdf">Project Poster</a>
+                            <a href="Abstract for FPGA-Controlled Single Refreshable Braille Character.pdf">Project Abstract</a>
+                            <a href=https://youtu.be/cZxDR9CNd1c>Demo Video</a> 
+                            <a href=FinalYearProject_Awards.pdf>FYP Award</a>
+                            <a href="https://github.com/dac70r/Final_Year_Project">Github</a>        
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2.</td>
+                        <td>EE2026: Digital Design - Digital Sound Level Meter</td>
+                        <td><a href="S1_07_Dennis Wong Guan Ming_Shin Donghun_Report_01.pdf"> Project Report</a> <a href="https://www.youtube.com/watch?v=xo3FzqXuZ_4"> Demo Video</a></td>
+                    </tr>
+                        <td>3.</td>
+                        <td>ELEC3300: Introduction to Embedded Systems - Arcade System</td>
+                        <td><a href="https://www.youtube.com/watch?v=r7zJubd84dI"> Demo Video</a></td>
+                    <tr>
+                    </tr>
+                </table>
+            </ul>
+        <h3><u>Project Photo Gallery</u></h3>
+        <div class="row">
+            <div class="column">
+                <img src="First Ptototype.jpg" alt="Snow" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="FYP Final Product.jpg" alt="Forest" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="Braille Close Up.jpg" alt="Mountains" style="width:100%">
+            </div>
+        </div>
+        <center>Final Year Project: Braille Display Models </center>
       </div>
 
       <div id="Singapore" class="tabcontent">
@@ -126,12 +213,40 @@
 
       <div id="Kuala Lumpur" class="tabcontent">
         <h3><u>Course Taken</u></h3>
-    <ol>
-        <!-- <li><a href="ELEC1100.html">ELEC1100</a></li>
-        <li><a href="EE2026.html">EE2026</a> </li> -->
-    </ol> 
+            <ol>
+                <li><a href="ELEC1100.html">ELEC1100</a></li>
+                <li><a href="EE2026.html">EE2026</a> </li>
+            </ol> 
       </div>
-    
+
+      <div id="Johor Bahru" class="tabcontent">
+        <h3><u>Photo Gallery</u></h3>
+            <div class="image-slideshow">
+                <div class="image fade">
+                    <img src="FYP Industry Day.jpg" class="center" alt="FYP_Midterm_Day_Dennis">
+                </div>
+                <div class="image fade">
+                    <img src="Dennis_Explaining.jpg" class="center" width="700" height="auto" alt="FYP_Midterm_Day_Dennis">
+                </div>
+                <div class="image fade">
+                    <img src="Dennis_Overview.jpg" class="center" width="700" height="auto" alt="FYP_Midterm_Day_Dennis">
+                </div>
+                <div class="image fade">
+                    <img src="Dennis_and_Team_FYP.jpg" class="center" width="700" height="auto" alt="FYP_Midterm_Day_Dennis">
+                </div>
+                <div class="image fade">
+                    <img src="Dennis FYP Ceremony.jpg" class="center" width="700" height="auto" alt="FYP_Midterm_Day_Dennis">
+                </div>
+                <div class="image fade">
+                    <img src="FYP_Midterm_Day_Dennis.jpg" class="center" width="500" height="auto" alt="FYP_Midterm_Day_Dennis">
+                </div>
+                <div class="image fade">
+                    <img src="FYP_Midterm_Day_Dennis_Project.jpg" class="center" width="500" height="auto" alt="FYP_Midterm_Day_Dennis_Project">
+                </div>
+            </div>
+            <script src="main.js"></script>
+      </div>
+
     <h4>Website last updated on: 3/10/2023</h4>
 
     <script>
@@ -148,7 +263,7 @@
           document.getElementById(cityName).style.display = "block";
           evt.currentTarget.className += " active";
         }
-        </script>
+    </script>
 
 </body>
 </html>
