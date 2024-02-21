@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Feb 20 22:39:49 2024
-# Process ID: 18264
+# Start of session at: Wed Feb 21 23:10:19 2024
+# Process ID: 15272
 # Current directory: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026.runs/synth_1
-# Command line: vivado.exe -log five_bit_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source five_bit_adder.tcl
-# Log file: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026.runs/synth_1/five_bit_adder.vds
+# Command line: vivado.exe -log Top_Module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Module.tcl
+# Log file: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026.runs/synth_1/Top_Module.vds
 # Journal file: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source five_bit_adder.tcl -notrace
+source Top_Module.tcl -notrace
