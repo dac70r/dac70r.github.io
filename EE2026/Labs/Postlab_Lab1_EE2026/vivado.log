@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Feb 24 10:55:55 2024
+# Process ID: 10228
+# Current directory: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab1_EE2026
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16216 C:\Users\denni\Documents\dac70r.github.io\EE2026\Labs\Postlab_Lab1_EE2026\Postlab_Lab1_EE2026.xpr
+# Log file: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab1_EE2026/vivado.log
+# Journal file: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab1_EE2026\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab1_EE2026/Postlab_Lab1_EE2026.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Dennis Wong/Postlab_Lab1_EE2026' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'Postlab_Lab1_EE2026.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1112.125 ; gain = 0.000
