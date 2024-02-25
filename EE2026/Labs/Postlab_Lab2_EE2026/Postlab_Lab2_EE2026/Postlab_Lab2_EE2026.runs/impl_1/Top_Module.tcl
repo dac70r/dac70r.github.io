@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -142,7 +140,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026.runs/synth_1/Top_Module.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Basys3_Constraints_Template.xdc
+  read_xdc C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026/Postlab_Lab2_EE2026.srcs/constrs_1/new/my_basys3.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

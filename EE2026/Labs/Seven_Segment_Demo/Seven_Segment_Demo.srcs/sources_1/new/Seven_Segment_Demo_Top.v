@@ -21,9 +21,35 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Seven_Segment_Demo_Top(input [15:12]swi, input [7:0]sw, output [3:0]an, output [7:0]seg);
+module Seven_Segment_Demo_Top(input CLK100MHZ, input [15:12]swi, input [6:0]sw, output [3:0]an, output  [6:0]seg, output dp);
 
-    assign seg = ~(sw);
+    reg one = 7'b1111001;
+    reg two = 7'b0100100;
+    reg three = 7'b0110000;
+    reg four = 7'b0011001;
+    reg five = 7'b0010010;
+    reg six = 7'b0000010;
+    reg seven = 7'b1111000;
+    reg eight = 7'b0000000;
+    reg nine = 7'b0010000;
+    reg zero = 7'b1000000;
+    
+reg [27:0] counter = 0; // 1hz clock
+reg led_output = 0;
+    
+    always @ (posedge CLK100MHZ)
+    begin
+         if(counter == 99_999_999)
+         begin
+            led_output <= ~led_output;
+            counter <= 0;
+         end
+         else
+            counter <= counter + 1;
+    end 
+       
+    assign seg[6:0] = ~(sw[6:0]);
     assign an[3:0] = ~(swi[15:12]);
+    assign dp = led_output;
     
 endmodule
