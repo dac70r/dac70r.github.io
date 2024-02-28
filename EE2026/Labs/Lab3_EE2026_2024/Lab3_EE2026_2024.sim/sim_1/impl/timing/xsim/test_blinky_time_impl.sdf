@@ -1,0 +1,39 @@
+(DELAYFILE 
+(SDFVERSION "3.0" )
+(DESIGN "blinky")
+(DATE "Wed Feb 28 19:50:58 2024")
+(VENDOR "XILINX")
+(PROGRAM "Vivado")
+(VERSION "2020.2")
+(DIVIDER /)
+(TIMESCALE 1ps)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE clock_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (1388.0:1458.4:1458.4) (1388.0:1458.4:1458.4))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE led_OBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (3301.8:3503.8:3503.8) (3301.8:3503.8:3503.8))
+    )
+  )
+)
+(CELL 
+    (CELLTYPE "blinky")
+    (INSTANCE )
+    (DELAY
+      (ABSOLUTE
+      (INTERCONNECT clock_IBUF_inst/O led_OBUF_inst/I (4107.6:4751.6:4751.6) (4107.6:4751.6:4751.6))
+      )
+    )
+)
+)

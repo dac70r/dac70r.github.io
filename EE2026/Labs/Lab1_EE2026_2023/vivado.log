@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Feb 25 17:43:14 2024
+# Process ID: 12200
+# Current directory: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Lab1_EE2026_2023
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7644 C:\Users\denni\Documents\dac70r.github.io\EE2026\Labs\Lab1_EE2026_2023\Lab1_EE2026_2023.xpr
+# Log file: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Lab1_EE2026_2023/vivado.log
+# Journal file: C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Lab1_EE2026_2023\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Lab1_EE2026_2023/Lab1_EE2026_2023.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Dennis Wong/Lab1_EE2026_2023' since last save.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'E:/Academics/EE2026/EE2026 Labs/Basys3_Constraints_Template.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'Lab1_EE2026_2023.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1109.961 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 25 17:44:05 2024...

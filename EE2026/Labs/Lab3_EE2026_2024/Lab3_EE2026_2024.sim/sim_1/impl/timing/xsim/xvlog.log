@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Lab3_EE2026_2024/Lab3_EE2026_2024.sim/sim_1/impl/timing/xsim/test_blinky_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blinky
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab2_EE2026/Lab3_EE2026_2024/Lab3_EE2026_2024.srcs/sim_1/new/my_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_blinky

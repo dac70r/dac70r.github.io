@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"test_blinky_time_impl.v" \
+"../../../../../Lab3_EE2026_2024.srcs/sim_1/new/my_sim.v" \
+
+# Do not sort compile order
+nosort
