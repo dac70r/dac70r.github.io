@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1709132383">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1709214996">
   <File Type="PA-TCL" Name="Postlab3_Top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Postlab3_Top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Postlab3_Top_reports.tcl"/>
@@ -26,6 +26,12 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/my_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

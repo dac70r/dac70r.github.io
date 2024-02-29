@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -96,6 +98,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/constrs_1/new/my_constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/constrs_1/new/my_constraints.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
