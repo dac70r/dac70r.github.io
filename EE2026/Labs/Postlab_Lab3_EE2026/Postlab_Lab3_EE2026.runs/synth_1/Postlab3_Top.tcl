@@ -72,8 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -90,7 +88,13 @@ set_property ip_output_repo c:/Users/denni/Documents/dac70r.github.io/EE2026/Lab
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/Postlab3.v
+read_verilog -library xil_defaultlib {
+  C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/clk_100hz.v
+  C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/clk_10hz.v
+  C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/clk_1hz.v
+  C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/clk_4hz.v
+  C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/Postlab3.v
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
