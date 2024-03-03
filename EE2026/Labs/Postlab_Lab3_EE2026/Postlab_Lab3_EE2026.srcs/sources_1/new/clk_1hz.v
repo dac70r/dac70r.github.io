@@ -3,7 +3,7 @@
 
 module clk_1hz(input main_clock, output reg clk_1hz);
 
-reg [31:0] clk_1hz_count = 0;
+reg [25:0] clk_1hz_count = 0; // 26-bit counter
 reg clk_1hz_output = 0;
     
 always @ (posedge main_clock)

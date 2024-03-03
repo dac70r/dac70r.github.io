@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
 
 module clk_10hz(input main_clock, output reg clk_10hz);
-reg [31:0] clk_10hz_count = 0;
+
+reg [22:0] clk_10hz_count = 0; // 22-bit counter
 reg clk_10hz_output = 0;
     
 always @ (posedge main_clock)

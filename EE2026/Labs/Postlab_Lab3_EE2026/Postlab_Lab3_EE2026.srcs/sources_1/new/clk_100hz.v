@@ -2,7 +2,7 @@
 
 module clk_100hz(input main_clock, output reg clk_100hz);
 
-reg [31:0] clk_100hz_count = 0;
+reg [18:0] clk_100hz_count = 0; // 19-bit counter
 reg clk_100hz_output = 0;
     
 always @ (posedge main_clock)

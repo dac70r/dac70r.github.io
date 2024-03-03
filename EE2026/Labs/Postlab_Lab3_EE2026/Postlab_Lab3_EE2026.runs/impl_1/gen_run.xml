@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1709374903">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1709478434">
   <File Type="BITSTR-BMM" Name="Postlab3_Top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Postlab3_Top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Postlab3_Top_timing_summary_init.rpt"/>
@@ -105,7 +105,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Postlab3.v">
+    <File Path="$PSRCDIR/sources_1/new/debouncing_Postlab3.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -114,7 +114,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/dff.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Postlab3.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

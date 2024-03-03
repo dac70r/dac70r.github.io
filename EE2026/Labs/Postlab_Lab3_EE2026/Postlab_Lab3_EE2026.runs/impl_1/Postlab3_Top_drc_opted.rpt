@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Mar  2 18:22:55 2024
+| Date         : Sun Mar  3 23:08:31 2024
 | Host         : DennisesLegion running 64-bit major release  (build 9200)
 | Command      : report_drc -file Postlab3_Top_drc_opted.rpt -pb Postlab3_Top_drc_opted.pb -rpx Postlab3_Top_drc_opted.rpx
 | Design       : Postlab3_Top
@@ -24,12 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
-+----------+----------+-----------------------------------------------------+------------+
-| Rule     | Severity | Description                                         | Violations |
-+----------+----------+-----------------------------------------------------+------------+
-| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-+----------+----------+-----------------------------------------------------+------------+
+             Violations found: 5
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 4          |
++-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -44,6 +45,30 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT db0/dff1/segment_count[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+segment_count_reg[0], segment_count_reg[1]
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT db1/dff1/segment_count_L[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+segment_count_L_reg[0], segment_count_L_reg[1]
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT db2/dff1/segment_count_U[1]_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+segment_count_U_reg[0], segment_count_U_reg[1]
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT db3/dff1/segment_count_R[1]_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+segment_count_R_reg[0], segment_count_R_reg[1]
 Related violations: <none>
 
 

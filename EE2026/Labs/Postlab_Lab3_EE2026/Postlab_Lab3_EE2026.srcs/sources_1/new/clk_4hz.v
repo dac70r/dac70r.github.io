@@ -2,7 +2,7 @@
 
 module clk_4hz(input main_clock, output clk_4hz);
 
-reg [31:0] clk_4hz_count = 0;
+reg [23:0] clk_4hz_count = 0; // 24-bit counter
 reg clk_4hz_output = 0;
     
 always @ (posedge main_clock)

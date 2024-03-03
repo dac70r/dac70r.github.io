@@ -93,6 +93,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/clk_10hz.v
   C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/clk_1hz.v
   C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/clk_4hz.v
+  C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/debouncing_Postlab3.v
+  C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/dff.v
   C:/Users/denni/Documents/dac70r.github.io/EE2026/Labs/Postlab_Lab3_EE2026/Postlab_Lab3_EE2026.srcs/sources_1/new/Postlab3.v
 }
 OPTRACE "Adding files" END { }
