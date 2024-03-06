@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Sun Mar  3 23:08:58 2024
+| Date             : Wed Mar  6 00:22:34 2024
 | Host             : DennisesLegion running 64-bit major release  (build 9200)
 | Command          : report_power -file Postlab3_Top_power_routed.rpt -pb Postlab3_Top_power_summary_routed.pb -rpx Postlab3_Top_power_routed.rpx
 | Design           : Postlab3_Top
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      449 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      109 |     20800 |            0.52 |
+| Slice Logic    |    <0.001 |      496 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      137 |     20800 |            0.66 |
 |   CARRY4       |    <0.001 |       50 |      8150 |            0.61 |
-|   Register     |    <0.001 |      239 |     41600 |            0.57 |
+|   Register     |    <0.001 |      250 |     41600 |            0.60 |
 |   Others       |     0.000 |       34 |       --- |             --- |
-| Signals        |    <0.001 |      381 |       --- |             --- |
-| I/O            |     0.001 |       30 |       106 |           28.30 |
+| Signals        |    <0.001 |      429 |       --- |             --- |
+| I/O            |     0.001 |       33 |       106 |           31.13 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.076 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+

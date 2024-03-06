@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Mar  3 23:08:57 2024
+| Date         : Wed Mar  6 00:22:33 2024
 | Host         : DennisesLegion running 64-bit major release  (build 9200)
 | Command      : report_drc -file Postlab3_Top_drc_routed.rpt -pb Postlab3_Top_drc_routed.pb -rpx Postlab3_Top_drc_routed.rpx
 | Design       : Postlab3_Top
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 12
+             Violations found: 15
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| PDRC-153    | Warning  | Gated clock check                                           | 7          |
+| PDRC-153    | Warning  | Gated clock check                                           | 10         |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 4          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
@@ -50,35 +50,50 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net db0/dff1/led_output_btnC is a gated clock net sourced by a combinational pin db0/dff1/segment_count[1]_i_2/O, cell db0/dff1/segment_count[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net an_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin an_reg[3]_i_2/O, cell an_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net db1/dff1/led_output_btnL is a gated clock net sourced by a combinational pin db1/dff1/segment_count_L[1]_i_2/O, cell db1/dff1/segment_count_L[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net db0/dff1/led_output_btnC is a gated clock net sourced by a combinational pin db0/dff1/segment_count[1]_i_2/O, cell db0/dff1/segment_count[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net db2/dff1/led_output_btnU is a gated clock net sourced by a combinational pin db2/dff1/segment_count_U[1]_i_1/O, cell db2/dff1/segment_count_U[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net db1/dff1/led_output_btnL is a gated clock net sourced by a combinational pin db1/dff1/segment_count_L[1]_i_2/O, cell db1/dff1/segment_count_L[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net db3/dff1/led_output_btnR is a gated clock net sourced by a combinational pin db3/dff1/segment_count_R[1]_i_1/O, cell db3/dff1/segment_count_R[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net db2/dff1/led_output_btnU is a gated clock net sourced by a combinational pin db2/dff1/segment_count_U[1]_i_1/O, cell db2/dff1/segment_count_U[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net seg_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin seg_reg[6]_i_2/O, cell seg_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net db3/dff1/led_output_btnR is a gated clock net sourced by a combinational pin db3/dff1/segment_count_R[1]_i_1/O, cell db3/dff1/segment_count_R[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net subtaskA_done_flag9_out is a gated clock net sourced by a combinational pin subtaskA_done_flag_reg_i_1/O, cell subtaskA_done_flag_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net seg_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin seg_reg[2]_i_2/O, cell seg_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
+Gated clock check  
+Net seg_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin seg_reg[4]_i_2/O, cell seg_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net seg_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin seg_reg[6]_i_2/O, cell seg_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net subtaskA_done_flag1_out is a gated clock net sourced by a combinational pin subtaskA_done_flag_reg_i_1/O, cell subtaskA_done_flag_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
 Gated clock check  
 Net unlocked_led_reg_i_2_n_0 is a gated clock net sourced by a combinational pin unlocked_led_reg_i_2/O, cell unlocked_led_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

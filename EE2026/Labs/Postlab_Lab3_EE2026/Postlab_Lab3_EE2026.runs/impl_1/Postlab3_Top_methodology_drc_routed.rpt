@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Mar  3 23:08:58 2024
+| Date         : Wed Mar  6 00:22:34 2024
 | Host         : DennisesLegion running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Postlab3_Top_methodology_drc_routed.rpt -pb Postlab3_Top_methodology_drc_routed.pb -rpx Postlab3_Top_methodology_drc_routed.rpx
 | Design       : Postlab3_Top
@@ -23,13 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 38
+             Violations found: 47
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 20         |
+| LUTAR-1   | Warning          | LUT drives async reset alert  | 4          |
 | TIMING-18 | Warning          | Missing input or output delay | 9          |
-| TIMING-20 | Warning          | Non-clocked latch             | 9          |
+| TIMING-20 | Warning          | Non-clocked latch             | 14         |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -134,6 +135,27 @@ Non-clocked sequential cell
 The clock pin segment_count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell an_reg[3]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) an_reg[3]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell seg_reg[2]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) an_reg[2]/PRE, seg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell seg_reg[4]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) seg_reg[4]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell seg_reg[6]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) an_reg[0]/CLR, an_reg[1]/PRE, seg_reg[3]/CLR, seg_reg[5]/PRE
+seg_reg[6]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An output delay is missing on LED[0] relative to clock(s) sys_clk_pin
@@ -186,40 +208,65 @@ Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch an_reg[3] cannot be properly analyzed as its control pin an_reg[3]/G is not reached by a timing clock
+The latch an_reg[1] cannot be properly analyzed as its control pin an_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch seg_reg[2] cannot be properly analyzed as its control pin seg_reg[2]/G is not reached by a timing clock
+The latch an_reg[2] cannot be properly analyzed as its control pin an_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch seg_reg[3] cannot be properly analyzed as its control pin seg_reg[3]/G is not reached by a timing clock
+The latch an_reg[3] cannot be properly analyzed as its control pin an_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch seg_reg[4] cannot be properly analyzed as its control pin seg_reg[4]/G is not reached by a timing clock
+The latch led_12_reg cannot be properly analyzed as its control pin led_12_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch seg_reg[5] cannot be properly analyzed as its control pin seg_reg[5]/G is not reached by a timing clock
+The latch led_13_reg cannot be properly analyzed as its control pin led_13_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch seg_reg[6] cannot be properly analyzed as its control pin seg_reg[6]/G is not reached by a timing clock
+The latch led_14_reg cannot be properly analyzed as its control pin led_14_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch subtaskA_done_flag_reg cannot be properly analyzed as its control pin subtaskA_done_flag_reg/G is not reached by a timing clock
+The latch seg_reg[2] cannot be properly analyzed as its control pin seg_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
+Non-clocked latch  
+The latch seg_reg[3] cannot be properly analyzed as its control pin seg_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch seg_reg[4] cannot be properly analyzed as its control pin seg_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch seg_reg[5] cannot be properly analyzed as its control pin seg_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch seg_reg[6] cannot be properly analyzed as its control pin seg_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch subtaskA_done_flag_reg cannot be properly analyzed as its control pin subtaskA_done_flag_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
 Non-clocked latch  
 The latch unlocked_led_reg cannot be properly analyzed as its control pin unlocked_led_reg/G is not reached by a timing clock
 Related violations: <none>
