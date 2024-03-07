@@ -1,8 +1,11 @@
 `timescale 1ns / 1ps
 
 
-module clk_1hz(input main_clock, output reg clk_1hz, output reg [1:0] count_subtaskC_1hz = 0);
+module clk_1hz(input main_clock, 
+                output reg clk_1hz, 
+                output reg [1:0] count_subtaskC_1hz = 0);
 
+// Declare counters for the 1hz clock
 reg [25:0] clk_1hz_count = 0; // 26-bit counter
 reg clk_1hz_output = 0;
     
