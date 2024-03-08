@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Mar  7 23:20:07 2024
+| Date         : Fri Mar  8 23:33:24 2024
 | Host         : DennisesLegion running 64-bit major release  (build 9200)
 | Command      : report_drc -file Postlab3_Top_drc_opted.rpt -pb Postlab3_Top_drc_opted.pb -rpx Postlab3_Top_drc_opted.rpx
 | Design       : Postlab3_Top
@@ -67,7 +67,7 @@ Related violations: <none>
 
 PLHOLDVIO-2#4 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT db3/dff1/segment_count_R[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+A LUT db3/dff1/segment_count_R[1]_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
 segment_count_R_reg[0], segment_count_R_reg[1]
 Related violations: <none>
 
