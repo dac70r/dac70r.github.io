@@ -1,0 +1,42 @@
+////
+////
+/////adding nodes:
+//////where are we adding the nodes?
+////empty list? 
+////beginning of the list?
+////end of the list?
+/////between two nodes?
+
+
+///adding a node to an empty list
+///to add a node:
+///step one : create a node
+///store the address in new_node pointer
+///head = new_node
+
+
+///insert a node at the beginnning (at position 0)
+///create a node
+///new_node pointer pointing to the new node
+///update 
+/// new_node->next = head->next //new node's next now points to head's next (which is initially the node next to head)
+///update head to point the new node
+///head = new_node
+
+
+///insert in between 
+/// need some search operation
+/// create a new node with pointer pointing to the new node
+/// find the node to inserrt new node behind of eg. find p, insert node behind p 
+/// first step is to link new node to the node 'behind'  the new node
+/// new_node->next = p->next
+/// linking new node to the one before it which is p
+/// p-> next = new_node
+///
+
+////insert at the last 
+/// create newnode 
+///search operaation
+// p here is the last node
+// p->next = new_node
+//new_node -> nullptr

@@ -1,0 +1,11 @@
+memory leak every time addThing is called.
+
+addThing works with help of another function which uses dynamic memory but has no way to deallocate.
+
+To solve the problem:
+
+ditch the function completely, create pointers on the spot and deallocate memory on the spot
+
+after use.
+
+to achieve that, i may have to rewrite the addThing function, the whole program too..

@@ -1,0 +1,51 @@
+if (pattern[patPos] != NULL_CHAR && str[strPos] == NULL_CHAR) // the substring is shorter than the pattern to match
+        return NOT_FOUND;
+
+    if (pattern[patPos] == QMARK || pattern[patPos] == str[strPos])
+    {
+        if (pattern[patPos + 1] == NULL_CHAR) // the entire pattern is matched
+            return 1;
+        // otherwise, the match is only part way through
+        int result = findSubLenAtStrPosWithQmark(str, pattern, strPos + 1, patPos + 1); // check if the remaining part of the pattern 
+                                                                                      // matches with that of the substring
+        if (result != NOT_FOUND) // only return a match when the entire pattern is matched
+            return 1 + result;
+    }
+    if(pattern[patPos]!= QMARK && pattern[patPos]!=str[strPos]){
+        if(findSubLenAtStrPosWithQmark(str,pattern,strPos-1,patPos)!=NOT_FOUND)
+            return findSubLenAtStrPosWithQmark(str,pattern,strPos-1,patPos);
+
+        if(findSubLenAtStrPosWithQmark(str,pattern,strPos,patPos-1)!=NOT_FOUND)
+            return findSubLenAtStrPosWithQmark(str,pattern,strPos,patPos-1);
+
+    }
+
+    return NOT_FOUND;
+
+
+ if (pattern[patPos] == QMARK || pattern[patPos] == str[strPos])
+    {
+        if(pattern[patPos]==QMARK){
+            if(pattern[patPos+1]==NULL_CHAR){
+                if(str[strPos]==NULL_CHAR){return 0;}
+                if(str[strPos]!=NULL_CHAR && str[strPos+1]==NULL_CHAR)
+                {
+                    return 1;
+                }
+            }
+        }
+        
+        int result = findSubLenAtStrPosWithQmark(str,pattern,strPos+1,patPos+1);
+        if(result!=NOT_FOUND){
+            return 1+result;}
+
+    }
+    else
+    {
+        return NOT_FOUND;
+    }
+    
+    
+
+    
+}

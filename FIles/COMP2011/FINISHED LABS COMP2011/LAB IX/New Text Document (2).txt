@@ -1,0 +1,11 @@
+Contact* a = new_contact(contact_name,phone_number);
+        int size = strlen(contact_name);
+
+        for(int k =0; k<d->num_of_contacts;k++){
+                if(strlen(d->contacts_by_name[k]->contact_name) == strlen(contact_name) && (strncmp(d->contacts_by_name[k]->contact_name,contact_name,size))==0){
+                                              
+                        d->contacts_by_name[k] = a;
+                        
+                }  
+                
+        }

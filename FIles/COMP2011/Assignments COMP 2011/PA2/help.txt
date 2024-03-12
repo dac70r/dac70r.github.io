@@ -1,0 +1,12 @@
+if(find_safe_path(maze,path,x+1,y,exit_x,exit_y,width,height)==true)
+            return true;
+
+        if(find_safe_path(maze,path,x,y+1,exit_x,exit_y,width,height)==true)
+            return true;
+
+        else
+        {
+            path[y*width+x] = false;
+            return false;
+        }
+    }

@@ -1,0 +1,8 @@
+if(getLinkedListLength(map[y][x])== 1 && map[y][x]->quantity == quantity && map[y][x]->thing == thing){
+        
+        map[y][x]->quantity = 0;
+        delete map[y][x];
+        map[y][x] = nullptr;
+        return true;
+
+    }

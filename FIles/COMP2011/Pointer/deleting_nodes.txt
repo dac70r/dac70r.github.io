@@ -1,0 +1,37 @@
+scenario 
+
+1. empty list
+check if head==nullptr is yes then it is empty else not empty use if-statements
+
+2. delete beginning first node
+first node is not head 
+
+if head == current
+head = current->next;
+head = head->next;
+
+delete current;
+
+3. search for node to be deleted
+need another one pointing to the previous node
+
+ll_node = *prev = nullptr;
+*current = head;
+
+while(current!=nullptr && current->data != c){
+    prev = current;
+    current = prev->next;
+}
+
+skipping the note to be deleted
+prev->next = current->next
+
+delete current;
+
+
+
+4. delete at the back
+
+if(current->next = nullptr;)
+
+previous->next = current->next

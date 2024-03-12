@@ -1,0 +1,4 @@
+g++ -std=c++11 *.cpp -o pa3.exe
+
+./pa3.exe
+

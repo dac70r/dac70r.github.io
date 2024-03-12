@@ -1,0 +1,112 @@
+// COMP2011 Fall 2020
+// lab9.cpp -- source file
+
+#include <iostream>
+#include <cstring>
+#include "lab9.h"
+using namespace std;
+
+/*
+struct Contact {
+    char contact_name[MAX_NAME_LENGTH + 1];
+    char phone_number[MAX_PHONE_NUMBER_LENGTH + 1];
+};
+
+struct Telephone_Directory {
+    Contact* contacts_by_name[MAX_CONTACT_NUMBER]; // in sorted order of contact_name
+    Contact* contacts_by_phone_number[MAX_CONTACT_NUMBER]; // in sorted order of phone_number
+    int num_of_contacts; // number of contacts
+};
+*/
+
+// This function prints one contact's information.
+void print_contact(const Contact* contact){
+        cout << contact->contact_name <<  ":" << contact->phone_number << endl;
+}
+
+// This function will create (new) a Contact object with the given contact_name & phone_number,
+// and return its address (pointer).
+Contact* new_contact(const char contact_name[], const char phone_number[]){
+        
+        //Contact a;
+        Contact* ptr1 = new Contact;
+        strcpy(ptr1 -> contact_name,contact_name);
+        strcpy(ptr1 -> phone_number,phone_number);
+
+        return ptr1;
+}
+
+// This function will create (new) a Telephone_Directory object,
+// initialize num_of_contact to 0, initialize all array elements to nullptr,
+// and return the Telephone_Directory pointer (address).
+Telephone_Directory* new_telephone_directory(){
+
+        //Telephone_Directory a;
+        Telephone_Directory* ptr2 = new Telephone_Directory;
+        ptr2->num_of_contacts = 0;
+
+        for(int k=0;k<MAX_CONTACT_NUMBER;k++){
+                ptr2 -> contacts_by_name[k] =nullptr;
+                ptr2 -> contacts_by_phone_number[k] =nullptr;
+        }
+        return ptr2;
+}
+
+// This function will use new_contact() to create object within given contact_name & phone_num,
+// and add the pointer (address) to the 2 arrays of pointers in the Telephone_Directory object pointed by d.
+// contacts_by_name is to maintain the contacts in sorted order of names,
+// contacts_by_phone_number is to maintain the contacts in sorted order of phone numbers.
+void add_contact_to_telephone_directory(Telephone_Directory *d, const char contact_name[], const char phone_num[]){
+        
+        d->contacts_by_name[0] = new_contact(contact_name,phone_num);
+        d->contacts_by_phone_number[0] = new_contact(contact_name,phone_num);
+
+}
+
+// This function will print all contacts' infomation sorted by their names if by_names is true.
+// Otherwise print the contacts by their phone numbers
+void show_contacts(const Telephone_Directory* d, bool by_names){
+
+        //for(int k=0;k<MAX_CONTACT_NUMBER;k++){
+        cout<<d->contacts_by_name[0]->contact_name<<endl;
+        cout<<d->contacts_by_phone_number[0]->phone_number<<endl;
+       //}
+        return;
+
+}
+
+// This function will print queried contacts' infomation (indices stored in matched_contacts[]) either sorted by their names (when by_name=true) or sorted by their phone numbers (when by_name=false)
+void show_contacts(const Telephone_Directory* d, const int matched_contacts[], int matched_contacts_count,  bool by_name){
+        return;
+}
+
+
+
+// This function will delete all the Contact objects and the Telephone_Directory object.
+void delete_telephone_directory(Telephone_Directory* d) {
+        return;
+
+}
+
+
+// This function will search for contacts matching with the substring contact_name_partial, 
+// return num of matched contacts and store the indices of the matched contacts 
+// in the contacts_by_name array of Telephone_Directory in the array matched_contacts.
+int lookup_by_contact_name(const Telephone_Directory* d, const char contact_name_partial[], int matched_contacts[]){
+        return 1;
+}
+
+// This function will search for contacts matching with the substring phone_number_partial, 
+// return num of matched contacts and store the indicses of the matched contacts 
+// in the contacts_by_phone_number array of Telephone_Directory in the array matched_contacts.
+int lookup_by_phone_number(const Telephone_Directory* d, const char phone_number_partial[], int matched_contacts[]){
+        return 1;
+}
+
+// This function will update a contact's phone number given the contact_name.
+// and update the contacts_by_phone_num array in sorted order.
+void update_phone_number(Telephone_Directory* d, const char contact_name[], const char phone_number[]){
+        return;
+}
+
+
